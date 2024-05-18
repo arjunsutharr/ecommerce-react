@@ -46,7 +46,7 @@ This project is a frontend implementation of an ecommerce website using React. I
 1. Clone the repository:
 
 ```bash
-git clone []()
+git clone [https://github.com/arjunsutharr/ecommerce-react](https://github.com/arjunsutharr/ecommerce-react)
 ```
 
 2. Navigate to the project directory:
