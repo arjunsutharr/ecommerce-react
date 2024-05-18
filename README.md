@@ -1,46 +1,88 @@
-# Getting Started with Create React App and Redux
+## Ecommerce React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+**Key Features:**
 
-## Available Scripts
+- Navbar
+  - Displays the count of items in the cart
+  - Navigation links to different pages
+- All Products Page
+  - Displays a list of products fetched from a dummy API
+  - Inline editing of products
+  - Deleting products
+  - Sorting products by price
+  - Adding products to the cart
+- Add new prducts
+- Product Detail Page
+- Error and Success Handling
+  - Alerts/Notifications for various actions (add, edit, delete, errors)
 
-In the project directory, you can run:
+**Table of Contents**
 
-### `npm start`
+- [About BusyBuy](#about-busybuy)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Running the Application](#running-the-application)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About BusyBuy
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project is a frontend implementation of an ecommerce website using React. It provides functionalities such as viewing a list of products, adding products to a cart, editing and deleting products, sorting products by price, and managing the cart. The app utilizes Redux for state management and Radix with TailwindCSS for styling.
 
-### `npm test`
+**Built with:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React: For building the user interface
+- Redux Toolkit (for efficient state management)
+- React Router: For client-side routing
+- TailwindCSS: For styling
+- my-json-server: For creating a dummy API service
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (version 14 or later) and npm (or yarn) installed on your system. You can download them from [https://nodejs.org/en/download](https://nodejs.org/en/download)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone []()
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Navigate to the project directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd ecommerce-react
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install dependencies:
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project adheres to a well-organized structure for better maintainability:
+
+- src: Houses the core React application code.
+- components: Reusable React components for building UI elements.
+- pages: Individual application pages with specific functionalities, including 404Page.
+- redux: Contains Redux-related files for managing application state:
+
+  - ProductReducer.js: Manages product data, filtering, and manipulation.
+  - CartReducer.js: Controls user cart items, quantities, and updates.
+
+- App.js: The main application entry point, responsible for initializing components, routing, and authentication.
+- public: Contains static assets like images, fonts, and favicons used throughout the app.
+- package.json: Manages project dependencies, scripts, and metadata.
+
+## Running the Application
+
+1. Start the development server:
+
+```bash
+npm start
+```
+
+This will launch the development server and open in your default browser, usually at http://localhost:3000 (the port might vary).
