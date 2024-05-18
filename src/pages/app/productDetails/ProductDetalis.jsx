@@ -27,7 +27,7 @@ function ProductDetails() {
   useEffect(() => {
     dispatch(productActions.setLoading(true));
     dispatch(getOneProduct(productId));
-  }, []);
+  }, [dispatch, productId]);
 
   return (
     <Container
@@ -46,6 +46,7 @@ function ProductDetails() {
               <Flex justify={"center"}>
                 <img
                   src={singleProduct.img}
+                  alt={singleProduct.title}
                   style={{
                     display: "block",
                     objectFit: "contain",

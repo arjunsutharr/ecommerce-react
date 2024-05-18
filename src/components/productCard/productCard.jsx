@@ -14,15 +14,20 @@ import { removeProduct } from "../../redux/reducers/productReducer";
 import UpdateProduct from "../updateProduct/UpdateProduct";
 import { useNavigate } from "react-router-dom";
 import { addToCart } from "../../redux/reducers/cartReducer";
-import { StarFilledIcon, StarIcon, TrashIcon } from "@radix-ui/react-icons";
+import { StarFilledIcon, TrashIcon } from "@radix-ui/react-icons";
 
 function ProductCard({ product }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   return (
-    <Box>
-      <Card size="1" className="w-72">
+    <Box
+      width={{
+        initial: "44vw",
+        sm: "23vw",
+      }}
+    >
+      <Card size="1">
         <Flex mb="2" position="relative">
           <Box
             height="40vh"
@@ -86,12 +91,22 @@ function ProductCard({ product }) {
           mb="2"
         >
           <Box>
-            <Heading as="h4" size="3">
+            <Heading
+              as="h5"
+              size="2"
+              style={{
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                // maxWidth: "28vw", // Adjust maxWidth as needed
+              }}
+              className="w-20  sm:w-96"
+            >
               {product.title}
             </Heading>
           </Box>
 
-          <Text as="div" size="3" weight="bold">
+          <Text as="div" size="2" weight="bold">
             ₹ {product.price}
           </Text>
         </Flex>

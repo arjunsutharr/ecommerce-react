@@ -6,7 +6,7 @@ import { productActions } from "../../redux/reducers/productReducer";
 function SortProducts(params) {
   const dispatch = useDispatch();
   return (
-    <Box mb={"3"}>
+    <Box className="z-10" mb={"3"}>
       <Select.Root
         onValueChange={(value) => dispatch(productActions.sortProducts(value))}
       >

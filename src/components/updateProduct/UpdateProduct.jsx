@@ -12,7 +12,7 @@ import {
   productSelector,
   updateProductDetails,
 } from "../../redux/reducers/productReducer";
-import { Pencil2Icon, TrashIcon } from "@radix-ui/react-icons";
+import { Pencil2Icon } from "@radix-ui/react-icons";
 
 function UpdateProduct({ product }) {
   const dispatch = useDispatch();

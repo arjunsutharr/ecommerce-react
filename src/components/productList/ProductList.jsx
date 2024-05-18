@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Box, Container, Flex, Section, Select, Text } from "@radix-ui/themes";
+import { Flex, Section, Text } from "@radix-ui/themes";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProductCard from "../productCard/productCard";
